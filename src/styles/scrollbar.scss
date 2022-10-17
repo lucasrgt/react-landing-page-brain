@@ -1,0 +1,19 @@
+@use 'colors' as colors;
+
+::-webkit-scrollbar {
+  width: 0.375rem;
+
+  //width: 0.75rem;
+}
+
+//Track
+::-webkit-scrollbar-track {
+  background: colors.$background-dark;
+}
+
+//Handle
+::-webkit-scrollbar-thumb {
+  border-radius: rem(32);
+
+  @include gradient(180deg, colors.$list-rainbow);
+}

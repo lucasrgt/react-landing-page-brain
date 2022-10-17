@@ -1,0 +1,12 @@
+$colors: (red, blue, green, yellow, orange, lime);
+
+#pain-problem {
+  display: flex;
+  height: 50vh;
+  @each $color in $colors {
+    $i: index($colors, $color);
+    &:nth-child(#{$i}) {
+      background-color: #{$color};
+    }
+  }
+}

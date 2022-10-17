@@ -1,0 +1,40 @@
+@use '../colors' as colors;
+
+#begin-content {
+  display: flex;
+  margin: auto auto;
+  justify-content: space-between;
+  align-items: center;
+  width: $constraints;
+  color: colors.$text-light;
+
+  #begin-title {
+    flex: 50%;
+    p {
+      &:nth-child(1) {
+        @include responsive-text(72, medium);
+      }
+      &:nth-child(2) {
+        span {
+          @include responsive-text(56, medium);
+        }
+        @include responsive-text(64, medium);
+        @include padding('b', 2);
+      }
+    }
+    #begin-subtitle {
+      color: colors.$navbar-text;
+      @include responsive-text(24, regular);
+    }
+  }
+
+  #begin-img-container {
+    display: flex;
+    flex: 50%;
+    justify-content: end;
+    img {
+      width: rem(256 + 128);
+      @include animation-floating;
+    }
+  }
+}

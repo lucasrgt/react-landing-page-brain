@@ -1,0 +1,95 @@
+@use 'sass:math';
+
+//Pixels to Rem
+@function rem($pixels, $context: 16) {
+  @return calc(($pixels / $context) * 1rem);
+}
+
+//Padding
+@function padding($_variant) {
+  @if $_variant == 1 {
+    @return rem(16);
+  } @else if $_variant == 2 {
+    @return rem(32);
+  } @else if $_variant == 3 {
+    @return rem(48);
+  } @else if $_variant == 4 {
+    @return rem(56);
+  } @else if $_variant == 5 {
+    @return rem(64);
+  }
+}
+
+@mixin padding($direction: 'all', $variant: 1) {
+  @if $direction == 't' {
+    padding-top: padding($variant);
+  } @else if $direction == 'r' {
+    padding-right: padding($variant);
+  } @else if $direction == 'b' {
+    padding-bottom: padding($variant);
+  } @else if $direction == 'l' {
+    padding-left: padding($variant);
+  } @else if $direction == 'x' {
+    padding-inline: padding($variant);
+  } @else if $direction == 'y' {
+    padding-block: padding($variant);
+  } @else if $direction == 'all' {
+    padding: padding($variant);
+  }
+}
+
+//Page Responsivity
+
+$l-device: 1200px;
+$m-device: 760px;
+$s-device: 480px;
+
+@mixin device($size) {
+  @if $size == l {
+    @media screen and (min-width: $l-device) {
+      @content;
+    }
+  } @else if $size == m {
+    @media screen and (min-width: $m-device) and (max-width: ($l-device - 1)) {
+      @content;
+    }
+  } @else if $size == s {
+    @media screen and (max-width: ($m-device - 1)) {
+      @content;
+    }
+  }
+}
+
+//Text Responsivity
+
+@mixin responsive-text($size, $weight: medium) {
+  //Responsivity
+  @include device(l) {
+    font-size: rem($size);
+  }
+
+  @include device(m) {
+    font-size: rem($size * 0.8);
+  }
+
+  @include device(s) {
+    font-size: rem($size * 0.6);
+  }
+
+  //Font Variants
+  @if $weight == light {
+    font-weight: 300;
+  } @else if $weight == regular {
+    font-weight: 400;
+  } @else if $weight == medium {
+    font-weight: 500;
+  } @else if $weight == semi-bold {
+    font-weight: 600;
+  } @else if $weight == bold {
+    font-weight: 700;
+  } @else if $weight == extra-bold {
+    font-weight: 800;
+  } @else if $weight == black {
+    font-weight: 900;
+  }
+}

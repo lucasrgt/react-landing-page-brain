@@ -1,0 +1,22 @@
+#pain-section {
+  width: 100%;
+  height: 300vh;
+  display: flex;
+  #pain-title {
+    width: 50%;
+    height: 100vh;
+    margin: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    p {
+      @include responsive-text(32);
+      @include padding('b', 2);
+    }
+    @include padding('all', 2);
+  }
+  #pain-problems {
+    width: 50%;
+  }
+}

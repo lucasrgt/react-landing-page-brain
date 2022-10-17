@@ -1,0 +1,26 @@
+@use '../variables';
+
+@mixin buy-button($variant: 'sunset', $text-color) {
+  color: $text-color;
+  @if $variant == 'sunset' {
+    background: linear-gradient(
+      to right,
+      $red-variant,
+      $orange-variant
+    ) !important;
+  }
+  @if else $variant == 'night' {
+    background: linear-gradient(to right, green, purple);
+  }
+}
+
+#buy-button {
+  border-radius: rem($default-border-radius);
+  @include padding('y', 1);
+  @include padding('x', 2);
+  @include buy-button('sunset', white);
+  transition: 0.25s;
+  &:hover {
+    scale: 1.2;
+  }
+}
