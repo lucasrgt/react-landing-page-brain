@@ -1,7 +1,10 @@
+@use '../colors.scss' as colors;
 #pain-section {
   width: 100%;
   height: 300vh;
   display: flex;
+
+  //Section Title
   #pain-title {
     width: 50%;
     height: 100vh;
@@ -15,8 +18,15 @@
       @include padding('b', 2);
     }
     @include padding('all', 2);
+    #buy-button {
+      @include buy-button('night', colors.$text-light);
+    }
   }
+
+  //Problems
   #pain-problems {
     width: 50%;
+    display: flex;
+    flex-direction: column;
   }
 }

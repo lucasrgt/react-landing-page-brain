@@ -1,12 +1,29 @@
 $colors: (red, blue, green, yellow, orange, lime);
 
 #pain-problem {
-  display: flex;
   height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   @each $color in $colors {
     $i: index($colors, $color);
     &:nth-child(#{$i}) {
       background-color: #{$color};
+    }
+  }
+  @include padding('all', 2);
+  p {
+    &:nth-child(1) {
+      @include responsive-text(64);
+    }
+    &:nth-child(2) {
+      @include responsive-text(32, semi-bold);
+      @include padding('y', 2);
+    }
+    &:nth-child(3) {
+      @include responsive-text(24, regular);
     }
   }
 }

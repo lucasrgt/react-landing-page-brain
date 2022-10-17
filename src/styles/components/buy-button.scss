@@ -1,4 +1,16 @@
 @use '../variables';
+@use '../colors.scss';
+
+#buy-button {
+  border-radius: rem($default-border-radius);
+  @include responsive-text(16, medium);
+  @include padding('y', 1);
+  @include padding('x', 2);
+  transition: 0.25s;
+  &:hover {
+    scale: 1.2;
+  }
+}
 
 @mixin buy-button($variant: 'sunset', $text-color) {
   color: $text-color;
@@ -10,17 +22,10 @@
     ) !important;
   }
   @if else $variant == 'night' {
-    background: linear-gradient(to right, green, purple);
-  }
-}
-
-#buy-button {
-  border-radius: rem($default-border-radius);
-  @include padding('y', 1);
-  @include padding('x', 2);
-  @include buy-button('sunset', white);
-  transition: 0.25s;
-  &:hover {
-    scale: 1.2;
+    background: linear-gradient(
+      to right,
+      colors.$purple-variant,
+      colors.$blue-variant
+    );
   }
 }

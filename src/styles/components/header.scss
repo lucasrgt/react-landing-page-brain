@@ -36,6 +36,10 @@
     }
   }
 
+  #buy-button {
+    @include buy-button('sunset', colors.$background-dark);
+  }
+
   // @include responsive-text(18, 400);
   // .logo {
   //   width: rem(96);
