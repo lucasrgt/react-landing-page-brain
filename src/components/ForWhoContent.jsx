@@ -31,6 +31,7 @@ const ForWhoContent = () => {
           </div>
         </div>
         <div id="for-who-book">
+          <Book color={'black'} />
           <Book color={'white'} />
         </div>
       </div>
