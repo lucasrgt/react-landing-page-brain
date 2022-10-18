@@ -1,0 +1,55 @@
+@use '../colors.scss' as colors;
+
+#for-who-content {
+  width: $constraints;
+  display: flex;
+  margin: auto auto;
+  #for-who-topics {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    #rotating-crystal {
+      opacity: 0.75;
+      width: rem(48);
+      @include padding('r', 1);
+    }
+    p {
+      @include responsive-text(24, regular);
+    }
+    div {
+      display: flex;
+      align-items: center;
+      @include padding('y', 2);
+      strong {
+        font-weight: 500;
+      }
+      &:nth-child(1) {
+        strong {
+          color: colors.$pink-variant;
+        }
+      }
+      &:nth-child(2) {
+        strong {
+          color: colors.$green-variant;
+        }
+      }
+      &:nth-child(3) {
+        strong {
+          color: colors.$cyan-variant;
+        }
+      }
+    }
+  }
+  #for-who-book {
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    #book {
+      max-width: rem(256 + 64);
+      @include animation-floating();
+    }
+  }
+}

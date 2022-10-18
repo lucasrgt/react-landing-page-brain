@@ -1,0 +1,21 @@
+@use '../colors.scss' as colors;
+
+#for-who-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: {
+    color: colors.$background-dark;
+    image: url('/src/assets/img/color-pixel-stars.gif');
+    repeat: repeat;
+    position: center;
+    size: contain;
+  }
+  color: colors.$text-light;
+  h1 {
+    @include padding('y', 4);
+    @include responsive-text(48);
+  }
+}

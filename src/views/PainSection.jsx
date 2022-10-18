@@ -3,7 +3,7 @@ import { Controller, Scene } from 'react-scrollmagic';
 import BuyButton from '../components/BuyButton';
 import PainProblems from '../components/PainProblems';
 
-function PainSection() {
+const PainSection = () => {
   return (
     <React.Fragment>
       <Controller>
@@ -29,6 +29,6 @@ function PainSection() {
       </Controller>
     </React.Fragment>
   );
-}
+};
 
 export default PainSection;

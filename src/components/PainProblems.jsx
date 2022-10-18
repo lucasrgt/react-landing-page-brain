@@ -3,7 +3,7 @@ import React from 'react';
 const painProblems = [
   {
     id: 1,
-    icon: '☹️',
+    icon: '😞',
     title: 'SE SENTIU INCAPAZ',
     description: `Tirava notas baixas no colégio e se achava mais burro que os colegas
     da sala.`,

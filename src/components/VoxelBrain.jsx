@@ -1,4 +1,5 @@
 import React from 'react';
+
 import VoxelBrainImg from '../assets/img/voxel-brain.png';
 
 const VoxelBrain = () => {
