@@ -26,12 +26,11 @@ const ForWhoContent = () => {
             <RotatingCrystal color={'cyan'} />
             <p>
               Ninguém é burro de verdade, alguns apenas não souberam extrair o
-              <strong> verdadeiro poder do seu cérebro</strong>
+              <strong> verdadeiro poder do seu cérebro</strong>.
             </p>
           </div>
         </div>
         <div id="for-who-book">
-          <Book color={'black'} />
           <Book color={'white'} />
         </div>
       </div>
