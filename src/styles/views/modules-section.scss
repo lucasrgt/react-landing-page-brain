@@ -21,31 +21,35 @@
   #module-cards-container {
     width: $constraints;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     margin: 0 auto;
     gap: rem(32);
+    @include padding('b', 4);
+
 
     #module-card {
-      width: 37.5%;
+      width: 30%;
       display: flex;
+      flex-grow: 1;
       flex-direction: column;
+      justify-content: space-between;
       align-items: center;
       border-radius: $default-border-radius;
       transition: 0.25s;
-
-
+      
       &:hover {
         transform: translateY(-4px);
       }
 
       #module-img-container {
         width: 100%;
+
+        overflow: hidden;
         object-fit: cover;
 
         img {
           opacity: 0.975;
-          height: 100%;
+          height: auto;
           width: 100%;
           border-top-left-radius: $default-border-radius;
           border-top-right-radius: $default-border-radius;
@@ -60,17 +64,19 @@
 
       #module-card-text-container {
         width: 100%;
+        flex-grow: 1;
+        object-fit: cover;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         text-align: center;
         border-bottom-left-radius: $default-border-radius;
         border-bottom-right-radius: $default-border-radius;
         @include glass();
 
         p {
-          @include padding('t', 1);
+          @include padding('all', 1);
 
           &:nth-child(1) {
             @include responsive-text(24);
@@ -79,7 +85,7 @@
 
           &:nth-child(2) {
             @include padding('all', 1);
-            @include responsive-text(24, regular);
+            @include responsive-text(20, regular);
             color: colors.$text-dark;
           }
         }
@@ -87,18 +93,31 @@
     }
 
     #module-information {
-      width: 37.5%;
-      display: flex;
+      width: 100%;
+      flex-grow: 3;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
       text-align: center;
 
       div {
-        width: 87.5%;
+        flex-grow: 1;
         border-radius: $default-border-radius;
-        @include glass();
+
         @include padding('all', 1);
+        @include margin('y', 2);
+
+        &:nth-child(1) {
+          background-color: cornflowerblue;
+        }
+
+        &:nth-child(2) {
+          background-color: beige;
+        }
+
+        &:nth-child(3) {
+          background-color: lightpink;
+        }
 
         h1 {
           @include responsive-text(48);
@@ -122,5 +141,12 @@
         }
       }
     }
+  }
+
+  button {
+    @include padding('all', 2);
+    @include padding('x', 4);
+    @include margin('b', 4);
+    @include buy-button('night', colors.$text-light);
   }
 }

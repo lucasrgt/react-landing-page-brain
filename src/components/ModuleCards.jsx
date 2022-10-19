@@ -53,7 +53,7 @@ const ModuleCards = () => {
             <div id="module-card-text-container">
               <div>
                 <p>
-                  {`MÓDULO ${module.id}`}: {module.title}
+                  {`MÓDULO ${module.id}`}:<br /> {module.title}
                 </p>
               </div>
               <p>{module.description}</p>
@@ -68,14 +68,14 @@ const ModuleCards = () => {
             <h2 className="beige">PÁGINAS</h2>
           </div>
           <div>
-            <p>🧠</p>
-            <h1>7</h1>
-            <h2 className="pink"> ANOS DE CONHECIMENTO </h2>
-          </div>
-          <div>
             <p>🧊</p>
             <h1> 5 </h1>
             <h2 className="blue">MÓDULOS</h2>
+          </div>
+          <div>
+            <p>🧠</p>
+            <h1>7</h1>
+            <h2 className="pink"> ANOS DE CONHECIMENTO </h2>
           </div>
         </div>
       </div>

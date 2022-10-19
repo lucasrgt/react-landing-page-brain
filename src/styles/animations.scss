@@ -1,18 +1,25 @@
 @mixin animation-floating {
   animation-name: floating;
-  animation-duration: 3s;
+  animation-duration: 6s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 
   @keyframes floating {
     0% {
-      transform: translate(0, 0px);
+      transform: translate(0, 0px) rotate(0);
+
+    }
+    25% {
+      transform: translate(0, 15px) rotate(2deg);
     }
     50% {
-      transform: translate(0, 15px);
+      transform: translate(0, -0px) rotate(-0);
+    }
+    75% {
+      transform: translate(0, 15px) rotate(-2deg);
     }
     100% {
-      transform: translate(0, -0px);
+      transform: translate(0, -0px) rotate(0);
     }
   }
 }

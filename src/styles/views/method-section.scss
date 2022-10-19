@@ -1,0 +1,21 @@
+@use '../colors' as colors;
+
+#method-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: {
+    image: url("/src/assets/img/mesh-gradient-dark.jpg");
+    repeat: no-repeat;
+    position: center;
+    size: cover;
+  }
+
+  #method-title {
+    color: colors.$text-light;
+    @include padding('all', 4);
+    @include responsive-text(48);
+  }
+}

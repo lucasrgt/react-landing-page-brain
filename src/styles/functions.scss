@@ -6,7 +6,7 @@
 }
 
 //Padding
-@function padding($_variant) {
+@function spacing($_variant) {
   @if $_variant == 1 {
     @return rem(16);
   } @else if $_variant == 2 {
@@ -22,21 +22,40 @@
 
 @mixin padding($direction: 'all', $variant: 1) {
   @if $direction == 't' {
-    padding-top: padding($variant);
+    padding-top: spacing($variant);
   } @else if $direction == 'r' {
-    padding-right: padding($variant);
+    padding-right: spacing($variant);
   } @else if $direction == 'b' {
-    padding-bottom: padding($variant);
+    padding-bottom: spacing($variant);
   } @else if $direction == 'l' {
-    padding-left: padding($variant);
+    padding-left: spacing($variant);
   } @else if $direction == 'x' {
-    padding-inline: padding($variant);
+    padding-inline: spacing($variant);
   } @else if $direction == 'y' {
-    padding-block: padding($variant);
+    padding-block: spacing($variant);
   } @else if $direction == 'all' {
-    padding: padding($variant);
+    padding: spacing($variant);
   }
 }
+
+@mixin margin($direction: 'all', $variant: 1) {
+  @if $direction == 't' {
+    margin-top: spacing($variant);
+  } @else if $direction == 'r' {
+    margin-right: spacing($variant);
+  } @else if $direction == 'b' {
+    margin-bottom: spacing($variant);
+  } @else if $direction == 'l' {
+    margin-left: spacing($variant);
+  } @else if $direction == 'x' {
+    margin-inline: spacing($variant);
+  } @else if $direction == 'y' {
+    margin-block: spacing($variant);
+  } @else if $direction == 'all' {
+    margin: spacing($variant);
+  }
+}
+
 
 //Page Responsivity
 
