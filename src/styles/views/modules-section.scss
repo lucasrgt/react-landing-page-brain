@@ -1,0 +1,111 @@
+@use '../colors' as colors;
+
+#modules-section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  #modules-title {
+    @include padding('all', 4);
+    @include responsive-text(48);
+    color: colors.$text-dark;
+  }
+
+  #module-cards-container {
+    width: $constraints;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: rem(32);
+
+    #module-card {
+      width: 37.5%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid colors.$navbar-text;
+      border-radius: $default-border-radius;
+      transition: 0.25s;
+
+      &:hover {
+        scale: 1.01;
+      }
+
+      #module-img-container {
+        width: 100%;
+        object-fit: cover;
+
+        img {
+          height: 100%;
+          width: 100%;
+          border-top-left-radius: $default-border-radius;
+          border-top-right-radius: $default-border-radius;
+          filter: contrast(90%);
+          transition: 0.5s;
+
+          &:hover {
+            filter: contrast(100%);
+          }
+        }
+      }
+
+      #module-card-text-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        p {
+          @include padding('t', 1);
+
+          &:nth-child(1) {
+            @include responsive-text(24);
+          }
+
+          &:nth-child(2) {
+            @include padding('all', 1);
+            @include responsive-text(24, regular);
+          }
+        }
+      }
+    }
+
+    #module-information {
+      width: 37.5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      div {
+        @include padding('all', 2);
+
+        h1 {
+          @include responsive-text(48);
+        }
+
+        h2 {
+          @include responsive-text(32);
+        }
+
+        .beige {
+          color: colors.$orange-variant;
+        }
+
+        .pink {
+          color: colors.$pink-variant;
+        }
+
+        .blue {
+          color: colors.$cyan-variant;
+        }
+      }
+    }
+  }
+}

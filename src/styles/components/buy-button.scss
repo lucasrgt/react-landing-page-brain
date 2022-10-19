@@ -1,8 +1,8 @@
-@use '../variables';
-@use '../colors.scss';
+@use '../variables' as variables;
+@use '../colors.scss' as colors;
 
 #buy-button {
-  border-radius: rem($default-border-radius);
+  border-radius: variables.$default-border-radius;
   @include responsive-text(16, medium);
   @include padding('y', 1);
   @include padding('x', 2);
@@ -17,8 +17,8 @@
   @if $variant == 'sunset' {
     background: linear-gradient(
       to right,
-      $red-variant,
-      $orange-variant
+      colors.$red-variant,
+      colors.$orange-variant
     ) !important;
   }
   @if else $variant == 'night' {
