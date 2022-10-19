@@ -62,16 +62,19 @@ const ModuleCards = () => {
         ))}
         <div id="module-information">
           <div>
-            <h2 className="beige">+ DE</h2>
+            <p>🍂</p>
+            <h2 className="beige">+DE </h2>
             <h1>150</h1>
             <h2 className="beige">PÁGINAS</h2>
           </div>
           <div>
+            <p>🧠</p>
             <h1>7</h1>
-            <h2 className="pink">ANOS DE CONHECIMENTO</h2>
+            <h2 className="pink"> ANOS DE CONHECIMENTO </h2>
           </div>
           <div>
-            <h1>5</h1>
+            <p>🧊</p>
+            <h1> 5 </h1>
             <h2 className="blue">MÓDULOS</h2>
           </div>
         </div>

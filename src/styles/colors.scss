@@ -16,9 +16,13 @@ $text-light: #ffffff;
 
 $text-dark: #202233;
 
+$text-gray: #707070;
+
 //Usecase Colors
 
 $orange-variant: #ffab7b;
+
+$beige-variant: #ffbda0;
 
 $red-variant: #ff5151;
 
@@ -28,6 +32,10 @@ $blue-variant: #495bff;
 
 $pink-variant: #cf9abd;
 
+$pinky-variant: #f357aa;
+
+$light-blue-variant: #3cc7f3;
+
 $green-variant: #4aeb7b;
 
 $cyan-variant: #57d9ed;
@@ -35,7 +43,7 @@ $cyan-variant: #57d9ed;
 //Gradients Color List
 
 $list-rainbow: rgba(95, 255, 236, 1) 0%, rgba(0, 102, 255, 1) 33%,
-  rgba(255, 86, 166, 1) 66%, rgba(255, 189, 160, 1) 100%;
+rgba(255, 86, 166, 1) 66%, rgba(255, 189, 160, 1) 100%;
 
 //Create Gradient
 @mixin gradient($direction, $color-list) {
@@ -43,4 +51,13 @@ $list-rainbow: rgba(95, 255, 236, 1) 0%, rgba(0, 102, 255, 1) 33%,
   background: -moz-linear-gradient($direction, $color-list);
   background: -o-linear-gradient($direction, $color-list);
   background: linear-gradient($direction, $color-list);
+}
+
+//Create Glassmorphism
+@mixin glass() {
+  background: linear-gradient(210deg, rgba(255, 255, 255, 0.33), rgba(255, 255, 255, 0.77));
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
 }
