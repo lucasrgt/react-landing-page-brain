@@ -36,7 +36,7 @@
       align-items: center;
       border-radius: $default-border-radius;
       transition: 0.25s;
-      
+
       &:hover {
         transform: translateY(-4px);
       }
@@ -117,6 +117,7 @@
 
         &:nth-child(3) {
           background-color: lightpink;
+          margin: 0;
         }
 
         h1 {

@@ -1,6 +1,6 @@
 @use '../colors' as colors;
 
-#method-section {
+#method-title-container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -13,9 +13,59 @@
     size: cover;
   }
 
-  #method-title {
+  p {
     color: colors.$text-light;
     @include padding('all', 4);
     @include responsive-text(48);
+  }
+}
+
+#method-section {
+
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+
+  #method-benefit {
+    width: 25%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    &:nth-child(1) {
+      background-color: beige;
+    }
+
+    &:nth-child(2) {
+      background-color: indianred;
+    }
+
+    &:nth-child(3) {
+      background-color: forestgreen;
+    }
+
+    #method-benefit-title {
+      @include padding('all', 4);
+      @include responsive-text(24);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    #method-benefit-description {
+      @include padding('x', 2);
+      @include padding('b', 2);
+      @include responsive-text(16, regular);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
   }
 }
