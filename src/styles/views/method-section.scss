@@ -1,10 +1,10 @@
 @use '../colors' as colors;
 
-#method-title-container {
+#method-section {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
   text-align: center;
   background: {
     image: url("/src/assets/img/mesh-gradient-dark.jpg");
@@ -18,54 +18,103 @@
     @include padding('all', 4);
     @include responsive-text(48);
   }
-}
 
-#method-section {
 
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: space-between;
-
-  #method-benefit {
-    width: 25%;
-    height: auto;
+  #method-cards-container {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     text-align: center;
+    margin: auto auto;
+    width: $constraints;
 
-    &:nth-child(1) {
-      background-color: beige;
-    }
 
-    &:nth-child(2) {
-      background-color: indianred;
-    }
-
-    &:nth-child(3) {
-      background-color: forestgreen;
-    }
-
-    #method-benefit-title {
-      @include padding('all', 4);
-      @include responsive-text(24);
+    #method-card {
+      width: 75%;
+      background-color: white;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 0 auto;
+      border-radius: $default-border-radius;
+      transition: 0.25s;
+      @include margin('y', 4);
 
-    #method-benefit-description {
-      @include padding('x', 2);
-      @include padding('b', 2);
-      @include responsive-text(16, regular);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+      &:hover {
+        scale: 1.05;
+      }
+
+      h2 {
+        @include responsive-text(32);
+        color: $background-light;
+      }
+
+      &:nth-child(1) {
+        transform: rotate(-1deg);
+
+        #method-card-title {
+          background-image: linear-gradient(to right, colors.$blue-variant, colors.$light-blue-variant);
+        }
+
+        p {
+          color: colors.$light-blue-variant;
+        }
+
+      }
+
+      &:nth-child(2) {
+        transform: rotate(1deg);
+
+        #method-card-title {
+          background-image: linear-gradient(to right, colors.$red-variant, colors.$orange-variant);
+        }
+
+
+        p {
+          color: colors.$red-variant;
+        }
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-1deg);
+        @include margin('b', 4);
+
+        #method-card-title {
+          background-image: linear-gradient(to right, colors.$purple-variant, colors.$pink-variant);
+        }
+
+        p {
+          color: colors.$purple-variant;
+        }
+      }
+
+      #method-card-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        height: rem(128);
+        border-radius: $default-border-radius;
+
+        h1 {
+          @include responsive-text(32);
+          @include padding('x', 2);
+          color: colors.$text-light;
+        }
+      }
+
+      p {
+        &:nth-child(1) {
+          @include responsive-text(32)
+        }
+
+        &:nth-child(2) {
+          @include responsive-text(24, regular)
+        }
+      }
     }
   }
+
 }

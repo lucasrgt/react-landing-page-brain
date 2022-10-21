@@ -14,12 +14,15 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+
     p {
       color: colors.$text-dark;
       @include responsive-text(32);
       @include padding('b', 2);
     }
+
     @include padding('all', 2);
+
     #buy-button {
       @include buy-button('night', colors.$text-light);
       @include padding('all', 2);

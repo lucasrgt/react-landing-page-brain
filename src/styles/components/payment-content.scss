@@ -1,0 +1,58 @@
+@use '../colors' as colors;
+
+#payment-content {
+  width: $constraints;
+  display: flex;
+  justify-content: space-between;
+
+  #payment-call {
+    width: 35%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
+    @include margin('r', 4);
+
+    p {
+      &:nth-child(1), &:nth-child(2) {
+        @include responsive-text(32);
+        color: colors.$text-dark;
+      }
+
+      &:nth-child(3) {
+        @include responsive-text(24, regular);
+        @include padding('y', 1);
+      }
+    }
+
+    button {
+      @include buy-button('sunset', colors.$text-light);
+    }
+  }
+
+  #prices-comparison-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+
+    #prices-comparison {
+      display: flex;
+      justify-content: space-between;
+      color: colors.$text-dark;
+
+      @include padding('b', 2);
+
+      p {
+        @include responsive-text(20);
+        @include padding('x', 2);
+      }
+
+      h1 {
+        @include responsive-text(20);
+      }
+    }
+  }
+
+}

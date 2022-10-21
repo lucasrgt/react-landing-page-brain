@@ -1,0 +1,20 @@
+#presentation-section {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+
+
+  img {
+    width: 33.333%;
+    filter: contrast(75%);
+    transition: 0.2s;
+
+    &:hover {
+      filter: contrast(100%);
+    }
+
+  }
+
+
+}

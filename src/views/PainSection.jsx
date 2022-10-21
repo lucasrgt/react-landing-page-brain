@@ -1,17 +1,17 @@
-import React from 'react';
-import { Controller, Scene } from 'react-scrollmagic';
-import BuyButton from '../components/BuyButton';
-import PainProblems from '../components/PainProblems';
+import React from "react";
+import { Controller, Scene } from "react-scrollmagic";
+import BuyButton from "../components/BuyButton";
+import PainProblems from "../components/PainProblems";
 
 const PainSection = () => {
   return (
     <React.Fragment>
       <Controller>
         <Scene
-          triggerElement={'#pain-section'}
+          triggerElement={"#pain-section"}
           triggerHook={0}
-          duration={'200%'}
-          pin={'#pain-title'}
+          duration={"200%"}
+          pin={"#pain-title"}
           indicators={true}
         >
           <section id="pain-section">

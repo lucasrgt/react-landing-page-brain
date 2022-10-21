@@ -26,9 +26,11 @@
 
     li {
       @include padding('x', 1);
+
       a {
         color: colors.$navbar-text;
         transition: 0.333s;
+
         &:hover {
           color: colors.$primary;
         }
@@ -46,22 +48,23 @@
   // }
 
   //Media Queries
-  // @include d(m) {
-  //   width: grid(11);
-  //   justify-content: center;
-  //   button {
-  //     display: none;
-  //   }
-  // }
+  @include device(m) {
+    width: variables.$constraints;
+    justify-content: center;
+    button {
+      display: none;
+    }
+  }
 
-  // @include d(s) {
-  //   justify-content: center;
-  //   a,
-  //   button {
-  //     display: none;
-  //   }
-  //   img {
-  //     width: rem(64);
-  //   }
-  // }
+  @include device(s) {
+    justify-content: center;
+    
+    ul,
+    button {
+      display: none;
+    }
+    img {
+      width: rem(64);
+    }
+  }
 }

@@ -1,0 +1,98 @@
+@use '../colors' as colors;
+
+#bonus-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+
+  #bonus-container {
+    #bonus-title {
+      color: colors.$text-dark;
+      @include responsive-text(32);
+      @include padding('t', 4);
+      @include padding('b', 1);
+    }
+
+    #bonus-text-img-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      text-align: center;
+
+      @include padding('b', 2);
+
+      img {
+        width: rem(512 + 256);
+        max-width: 75%;
+        height: auto;
+      }
+    }
+
+    #bonus-gifts-container {
+      width: $constraints;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+      text-align: center;
+      @include padding('b', 2);
+
+      #gift-container {
+        width: 30%;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+        flex-direction: column;
+        border-radius: $default-border-radius;
+
+        @include padding('all', 2);
+        @include margin('all', 2);
+        @include glass();
+
+        @include device(m) {
+          width: 30%;
+        }
+
+        @include device(s) {
+          width: 50%;
+        }
+
+        #gift-img-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            @include animation-floating();
+            @include margin('b', 4);
+            height: 100%;
+            max-width: 75%;
+          }
+        }
+
+        #gift-bonus-title {
+          width: 100%;
+          @include responsive-text(24);
+          @include padding('b', 1);
+        }
+
+        p {
+          text-align: center;
+          color: colors.$text-gray;
+
+          &:nth-child(1) {
+            @include responsive-text(32);
+            @include padding('b', 1);
+          }
+
+          &:nth-child(2) {
+            @include responsive-text(24, regular);
+          }
+        }
+      }
+    }
+  }
+}

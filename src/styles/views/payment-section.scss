@@ -1,0 +1,15 @@
+@use '../colors' as colors;
+
+#payment-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  #payment-title {
+    color: colors.$text-dark;
+    @include responsive-text(48);
+    @include margin('b', 4);
+  }
+}

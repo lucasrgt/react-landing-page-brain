@@ -2,10 +2,10 @@
 
 #for-who-section {
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   background: {
     color: colors.$background-dark;
     image: url('/src/assets/img/color-pixel-stars.gif');
@@ -14,6 +14,7 @@
     size: contain;
   }
   color: colors.$text-light;
+
   h1 {
     @include padding('y', 4);
     @include responsive-text(48);

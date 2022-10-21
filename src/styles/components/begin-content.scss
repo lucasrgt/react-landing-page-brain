@@ -10,21 +10,25 @@
 
   #begin-title {
     flex: 50%;
+
     p {
       &:nth-child(1) {
         @include responsive-text(72, medium);
       }
+
       &:nth-child(2) {
         span {
           @include responsive-text(56, medium);
         }
+
         @include responsive-text(64, medium);
         @include padding('b', 2);
       }
     }
+
     #begin-subtitle {
       color: colors.$navbar-text;
-      @include responsive-text(24, regular);
+      @include responsive-text(32, regular);
     }
   }
 
@@ -32,9 +36,28 @@
     display: flex;
     flex: 50%;
     justify-content: end;
+
     img {
-      width: rem(256 + 128);
+      max-width: 75%;
       @include animation-floating;
     }
+  }
+}
+
+#begin-content {
+  @include device(s) {
+    flex-direction: column;
+    text-align: center;
+    #begin-img-container {
+      display: flex;
+      flex: 100%;
+      justify-content: center;
+      @include padding('t', 2);
+
+      img {
+        max-width: 50% !important;
+      }
+    }
+
   }
 }

@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   background: {
     image: url("/src/assets/img/mesh-gradient-1.jpg");
     repeat: no-repeat;
@@ -102,22 +103,35 @@
 
       div {
         flex-grow: 1;
+        width: 50%;
+        margin: 0 auto;
         border-radius: $default-border-radius;
 
         @include padding('all', 1);
         @include margin('y', 2);
 
+        @include glass();
+
+        transition: 0.25s;
+
+        &:hover {
+          transform: translateY(-4px);
+        }
+
         &:nth-child(1) {
           background-color: cornflowerblue;
+          opacity: 0.8;
         }
 
         &:nth-child(2) {
-          background-color: beige;
+          background-color: lightcoral;
+          opacity: 0.8;
         }
 
         &:nth-child(3) {
-          background-color: lightpink;
-          margin: 0;
+          background-color: orange;
+          opacity: 0.8;
+          margin: 0 auto;
         }
 
         h1 {
