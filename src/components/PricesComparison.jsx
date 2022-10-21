@@ -2,27 +2,27 @@ import React from "react";
 
 const comparisons = [
   {
-    icon: "car",
+    icon: "🚗",
     title: "VIAGEM DE CARRO NO APLICATIVO",
     price: "R$ 20,00",
   },
   {
-    icon: "lunch",
+    icon: "🍔",
     title: "PEDIR UM LANCHE NO APP DE DELIVERY",
     price: "R$ 70,00",
   },
   {
-    icon: "cinema",
+    icon: "🎞️",
     title: "IDA AO CINEMA COM O CRUSH",
     price: "R$ 110,00",
   },
   {
-    icon: "vestibular",
+    icon: "📃",
     title: "INSCRIÇÃO DO VESTIBULAR",
     price: "R$ 200,00",
   },
   {
-    icon: "car",
+    icon: "🎓",
     title: "MENSALIDADE DO CURSINHO",
     price: "R$ 800,00",
   },
@@ -33,11 +33,11 @@ function PricesComparison() {
     <React.Fragment>
       {comparisons.map((comparison) => (
         <div id="prices-comparison">
-          <img
-            src={`src/assets/img/prices/${comparison.icon}.png`}
-            alt="Icon"
-          />
-          <p>{comparison.title}</p>
+          <div id="prices-title">
+            <p>{comparison.icon}</p>
+            <h2>{comparison.title}</h2>
+          </div>
+
           <h1>{comparison.price}</h1>
         </div>
       ))}

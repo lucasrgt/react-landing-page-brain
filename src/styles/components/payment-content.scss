@@ -1,9 +1,16 @@
 @use '../colors' as colors;
 
+$benefits-colors: (#5CFBEC, #0167FF, #FF5AA5, #FFBDA0);
+
 #payment-content {
   width: $constraints;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+
+  #payment-info-container {
+    display: flex;
+  }
 
   #payment-call {
     width: 35%;
@@ -16,23 +23,24 @@
 
     p {
       &:nth-child(1), &:nth-child(2) {
-        @include responsive-text(32);
-        color: colors.$text-dark;
+        @include responsive-text(48);
+        color: colors.$text-light;
       }
 
       &:nth-child(3) {
         @include responsive-text(24, regular);
-        @include padding('y', 1);
+        @include padding('y', 2);
+        color: colors.$text-gray;
       }
     }
 
     button {
-      @include buy-button('sunset', colors.$text-light);
+      @include buy-button('night', colors.$text-light);
     }
   }
 
   #prices-comparison-container {
-    width: 50%;
+    width: 65%;
     display: flex;
     flex-direction: column;
 
@@ -40,19 +48,153 @@
     #prices-comparison {
       display: flex;
       justify-content: space-between;
-      color: colors.$text-dark;
+      align-items: center;
+      color: colors.$text-light;
 
-      @include padding('b', 2);
+      @include padding('b', 5);
 
-      p {
-        @include responsive-text(20);
-        @include padding('x', 2);
+      #prices-title {
+        display: flex;
+
+        p {
+          @include margin('r', 1);
+          @include responsive-text(48)
+        }
+
+        h2 {
+          display: flex;
+          align-items: center;
+          text-align: start;
+          @include responsive-text(20);
+        }
+
       }
 
       h1 {
-        @include responsive-text(20);
+        display: flex;
+        justify-content: end;
+        text-align: center;
+        @include responsive-text(32);
       }
     }
   }
 
+  #payment-final-container {
+    display: flex;
+    flex-direction: column;
+
+    #rainbow-separator {
+      width: 100%;
+      height: rem(8);
+      border-radius: $default-border-radius;
+      background: linear-gradient(to right, $list-rainbow);
+    }
+
+    #payment-final {
+      display: flex;
+      justify-content: space-between;
+      border-radius: $default-border-radius;
+      @include dark-glass();
+      @include padding('all', 4);
+
+      #payment-final-benefits {
+        display: flex;
+        color: colors.$text-light;
+        width: 50%;
+
+        p {
+          text-align: start;
+          @include responsive-text(24);
+          @include padding('b', 1);
+          @each $color in $benefits-colors {
+            $i: index($benefits-colors, $color);
+            &:nth-child(#{$i}) {
+              color: #{$color};
+            }
+          }
+        }
+      }
+
+      #payment-final-price {
+        display: flex;
+        align-self: center;
+        color: colors.$text-light;
+        @include margin('l', 4);
+
+        #old-price {
+          color: $text-gray;
+
+          @include responsive-text(32);
+          @include margin('b', 1);
+
+          span {
+            text-decoration: line-through;
+            @include responsive-text(24);
+          }
+
+          h1 {
+            text-decoration: line-through;
+          }
+        }
+
+        #installments {
+          display: flex;
+
+          p {
+            &:nth-child(1) {
+              color: colors.$primary;
+              @include responsive-text(24);
+
+            }
+
+            &:nth-child(2) {
+              @include responsive-text(48)
+            }
+          }
+        }
+
+        #ou {
+          @include padding('y', 1)
+        }
+
+        #entire {
+          #entire-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include padding('x', 1);
+
+            h1 {
+
+
+              &:nth-child(2) {
+                color: colors.$cyan-variant;
+                @include responsive-text(20, regular)
+
+              }
+
+              span {
+                @include responsive-text(16, regular)
+              }
+
+              h2 {
+                margin-top: rem(4);
+              }
+
+            }
+          }
+
+
+          h1 {
+            @include responsive-text(24);
+            @include margin('b', 1);
+
+            h2 {
+              color: colors.$light-blue-variant;
+            }
+          }
+        }
+      }
+    }
+  }
 }

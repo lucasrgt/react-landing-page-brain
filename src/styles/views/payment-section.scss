@@ -6,10 +6,17 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  background: {
+    color: colors.$background-dark;
+    image: url('/src/assets/img/blobs.png');
+    repeat: no-repeat;
+    position: center;
+    size: cover;
+  }
 
   #payment-title {
-    color: colors.$text-dark;
+    color: colors.$text-light;
     @include responsive-text(48);
-    @include margin('b', 4);
+    @include margin('y', 4);
   }
 }
