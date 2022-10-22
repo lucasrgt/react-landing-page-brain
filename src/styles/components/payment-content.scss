@@ -17,6 +17,24 @@ $benefits-colors: (#5cfbec, #0167ff, #ff5aa5, #ffbda0);
 
   #payment-info-container {
     display: flex;
+    @include device(m) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+    @include device(s) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      #payment-call {
+        width: 75%;
+        margin: 0 auto;
+        @include margin('b', 4);
+      }
+      #price-comparison-container {
+        width: 75%;
+      }
+    }
   }
 
   #payment-call {
@@ -43,6 +61,10 @@ $benefits-colors: (#5cfbec, #0167ff, #ff5aa5, #ffbda0);
     }
 
     button {
+      p {
+        @include responsive-text(12);
+      }
+
       @include night-button(colors.$text-light);
     }
   }
@@ -51,6 +73,9 @@ $benefits-colors: (#5cfbec, #0167ff, #ff5aa5, #ffbda0);
     width: 65%;
     display: flex;
     flex-direction: column;
+    @include device(s) {
+      width: 100%;
+    }
 
     #prices-comparison {
       display: flex;
@@ -80,6 +105,8 @@ $benefits-colors: (#5cfbec, #0167ff, #ff5aa5, #ffbda0);
           align-items: center;
           text-align: start;
           @include responsive-text(20);
+          width: 80%;
+
         }
       }
 
@@ -103,6 +130,8 @@ $benefits-colors: (#5cfbec, #0167ff, #ff5aa5, #ffbda0);
     #payment-benefit {
       color: white;
       @include padding('b', 2);
+      transition: 0.5s;
+
 
       h1 {
         @include responsive-text(48);
@@ -135,12 +164,6 @@ $benefits-colors: (#5cfbec, #0167ff, #ff5aa5, #ffbda0);
         width: 100%;
         margin: 0 auto;
 
-        button {
-          @include sunset-button(colors.$text-dark);
-          @include margin('t', 4);
-
-          width: 50%;
-        }
 
         #payment-box {
 
@@ -164,7 +187,10 @@ $benefits-colors: (#5cfbec, #0167ff, #ff5aa5, #ffbda0);
         button {
           width: 100%;
           @include animation-scaling();
-          @include night-button(colors.$text-light)
+          @include night-button(colors.$text-light);
+          transition: 0.5s;
+
+
         }
 
         #old-price {
@@ -227,11 +253,11 @@ $benefits-colors: (#5cfbec, #0167ff, #ff5aa5, #ffbda0);
           }
 
           h1 {
-            @include responsive-text(24);
+            @include responsive-text(40);
             @include margin('b', 2);
 
             h2 {
-              @include responsive-text(20);
+              @include responsive-text(32);
               @include margin('b', 2);
               color: colors.$purple-variant;
             }
@@ -244,12 +270,11 @@ $benefits-colors: (#5cfbec, #0167ff, #ff5aa5, #ffbda0);
 
               h3 {
                 color: colors.$green-variant;
-                @include responsive-text(32);
+                @include responsive-text(48);
               }
 
               h4 {
-                @include responsive-text(16)
-
+                @include responsive-text(24)
               }
             }
           }

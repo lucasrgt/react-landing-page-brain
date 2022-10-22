@@ -29,7 +29,7 @@ function PaymentContent() {
               <p>SE TORNAR MAIS INTELIGENTE,</p>
             </div>
             <div>
-              <p>INVESTIR NA SUA SAÚDE E APRENDIZADO,</p>
+              <p>INVESTIR NA SUA SAÚDE FÍSICA E MENTAL,</p>
             </div>
             <div>
               <p>
@@ -65,7 +65,10 @@ function PaymentContent() {
                       </h1>
                     </div>
                   </div>
-                  <BuyButton content={"QUERO COMEÇAR AGORA!"} />
+                  <BuyButton
+                    content={"QUERO COMEÇAR AGORA!"}
+                    optionalContent={"R$ 0,43 POR DIA"}
+                  />
                 </div>
               </div>
             </div>

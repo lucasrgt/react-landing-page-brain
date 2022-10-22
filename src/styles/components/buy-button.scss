@@ -3,7 +3,7 @@
 
 #buy-button {
   border-radius: variables.$default-border-radius;
-  @include responsive-text(16, medium);
+  @include responsive-text(20, medium);
   @include padding('y', 1);
   @include padding('x', 2);
   transition: 0.25s;

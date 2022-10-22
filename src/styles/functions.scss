@@ -84,15 +84,15 @@ $s-device: 480px;
 @mixin responsive-text($size, $weight: medium) {
   //Responsivity
   @include device(l) {
-    font-size: rem($size);
+    font-size: rem($size) !important;
   }
 
   @include device(m) {
-    font-size: rem($size * 0.8);
+    font-size: rem($size * 0.8) !important;
   }
 
   @include device(s) {
-    font-size: rem($size * 0.6);
+    font-size: rem($size * 0.6) !important;
   }
 
   //Font Variants
