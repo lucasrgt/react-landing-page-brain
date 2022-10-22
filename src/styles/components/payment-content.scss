@@ -1,12 +1,19 @@
 @use '../colors' as colors;
 
-$benefits-colors: (#5CFBEC, #0167FF, #FF5AA5, #FFBDA0);
+$benefits-colors: (#5cfbec, #0167ff, #ff5aa5, #ffbda0);
 
 #payment-content {
   width: $constraints;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  #rainbow-separator {
+    width: 100%;
+    height: rem(8);
+    border-radius: $default-border-radius;
+    background: linear-gradient(to right, $list-rainbow);
+  }
 
   #payment-info-container {
     display: flex;
@@ -22,7 +29,8 @@ $benefits-colors: (#5CFBEC, #0167FF, #FF5AA5, #FFBDA0);
     @include margin('r', 4);
 
     p {
-      &:nth-child(1), &:nth-child(2) {
+      &:nth-child(1),
+      &:nth-child(2) {
         @include responsive-text(48);
         color: colors.$text-light;
       }
@@ -35,7 +43,7 @@ $benefits-colors: (#5CFBEC, #0167FF, #FF5AA5, #FFBDA0);
     }
 
     button {
-      @include buy-button('night', colors.$text-light);
+      @include night-button(colors.$text-light);
     }
   }
 
@@ -44,21 +52,27 @@ $benefits-colors: (#5CFBEC, #0167FF, #FF5AA5, #FFBDA0);
     display: flex;
     flex-direction: column;
 
-
     #prices-comparison {
       display: flex;
       justify-content: space-between;
       align-items: center;
       color: colors.$text-light;
+      transition: 0.5s;
+      @include margin('b', 4);
 
-      @include padding('b', 5);
+      &:hover {
+        border-radius: $default-border-radius;
+        @include dark-glass();
+        @include padding('all', 1);
+      }
 
       #prices-title {
         display: flex;
 
+
         p {
           @include margin('r', 1);
-          @include responsive-text(48)
+          @include responsive-text(48);
         }
 
         h2 {
@@ -67,7 +81,6 @@ $benefits-colors: (#5CFBEC, #0167FF, #FF5AA5, #FFBDA0);
           text-align: start;
           @include responsive-text(20);
         }
-
       }
 
       h1 {
@@ -80,46 +93,79 @@ $benefits-colors: (#5CFBEC, #0167FF, #FF5AA5, #FFBDA0);
   }
 
   #payment-final-container {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 
-    #rainbow-separator {
-      width: 100%;
-      height: rem(8);
-      border-radius: $default-border-radius;
-      background: linear-gradient(to right, $list-rainbow);
+    #payment-benefit {
+      color: white;
+      @include padding('b', 2);
+
+      h1 {
+        @include responsive-text(48);
+      }
+
+      p {
+        @include responsive-text(24);
+        @include margin('y', 2);
+        @each $color in $benefits-colors {
+          $i: index($benefits-colors, $color);
+          &:nth-child(#{$i}) {
+          }
+        }
+      }
     }
+
 
     #payment-final {
       display: flex;
-      justify-content: space-between;
-      border-radius: $default-border-radius;
-      @include dark-glass();
-      @include padding('all', 4);
+      flex-direction: column;
+      justify-content: center;
 
       #payment-final-benefits {
         display: flex;
+        justify-content: center;
+        text-align: start;
+        align-items: center;
         color: colors.$text-light;
-        width: 50%;
+        border-radius: $default-border-radius;
+        width: 100%;
+        margin: 0 auto;
 
-        p {
-          text-align: start;
+        button {
+          @include sunset-button(colors.$text-dark);
+          @include margin('t', 4);
+
+          width: 50%;
+        }
+
+        #payment-box {
+
           @include responsive-text(24);
           @include padding('b', 1);
-          @each $color in $benefits-colors {
-            $i: index($benefits-colors, $color);
-            &:nth-child(#{$i}) {
-              color: #{$color};
-            }
-          }
+
         }
       }
 
       #payment-final-price {
         display: flex;
-        align-self: center;
+        justify-content: center;
+        text-align: center;
         color: colors.$text-light;
-        @include margin('l', 4);
+        border-width: rem(8) !important;
+        border-style: solid !important;
+        border-image: linear-gradient(to bottom, colors.$list-rainbow) 1 !important;
+        @include dark-glass();
+        @include padding('all', 5);
+
+        button {
+          width: 100%;
+          @include animation-scaling();
+          @include night-button(colors.$text-light)
+        }
 
         #old-price {
           color: $text-gray;
@@ -139,22 +185,22 @@ $benefits-colors: (#5CFBEC, #0167FF, #FF5AA5, #FFBDA0);
 
         #installments {
           display: flex;
+          justify-content: center;
 
           p {
             &:nth-child(1) {
               color: colors.$primary;
               @include responsive-text(24);
-
             }
 
             &:nth-child(2) {
-              @include responsive-text(48)
+              @include responsive-text(48);
             }
           }
         }
 
         #ou {
-          @include padding('y', 1)
+          @include padding('y', 1);
         }
 
         #entire {
@@ -165,36 +211,52 @@ $benefits-colors: (#5CFBEC, #0167FF, #FF5AA5, #FFBDA0);
             @include padding('x', 1);
 
             h1 {
-
-
               &:nth-child(2) {
                 color: colors.$cyan-variant;
-                @include responsive-text(20, regular)
-
+                @include responsive-text(20, regular);
               }
 
               span {
-                @include responsive-text(16, regular)
+                @include responsive-text(16, regular);
               }
 
               h2 {
                 margin-top: rem(4);
               }
-
             }
           }
 
-
           h1 {
             @include responsive-text(24);
-            @include margin('b', 1);
+            @include margin('b', 2);
 
             h2 {
-              color: colors.$light-blue-variant;
+              @include responsive-text(20);
+              @include margin('b', 2);
+              color: colors.$purple-variant;
+            }
+
+            div {
+
+              border-radius: $default-border-radius;
+              @include dark-glass();
+              @include padding('all', 1);
+
+              h3 {
+                color: colors.$green-variant;
+                @include responsive-text(32);
+              }
+
+              h4 {
+                @include responsive-text(16)
+
+              }
             }
           }
         }
       }
+
     }
   }
 }
+

@@ -39,7 +39,7 @@
   }
 
   #buy-button {
-    @include buy-button('sunset', colors.$background-dark);
+    @include sunset-button(colors.$background-dark);
   }
 
   // @include responsive-text(18, 400);
@@ -58,7 +58,7 @@
 
   @include device(s) {
     justify-content: center;
-    
+
     ul,
     button {
       display: none;

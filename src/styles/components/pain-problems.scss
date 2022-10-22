@@ -1,6 +1,6 @@
 @use '../colors.scss';
 
-$colors: (#99a2fe, #6271ff, #4052ff, #3134ff);
+$i-colors: (#5cfbec, red, blue, green, yellow, orange);
 
 #pain-problem {
   height: 50vh;
@@ -9,8 +9,8 @@ $colors: (#99a2fe, #6271ff, #4052ff, #3134ff);
   justify-content: center;
   align-items: center;
   text-align: center;
-  @each $color in $colors {
-    $i: index($colors, $color);
+  @each $color in $i-colors {
+    $i: index($i-colors, $color);
     &:nth-child(#{$i}) {
       background-color: #{$color};
     }

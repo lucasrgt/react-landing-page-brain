@@ -19,43 +19,57 @@ function PaymentContent() {
             <PricesComparison />
           </div>
         </div>
+        <div></div>
         <div id="payment-final-container">
-          <div id="rainbow-separator"></div>
-          <div id="payment-final">
-            <div id="payment-final-benefits">
-              <div>
-                <p>SE TORNAR MAIS INTELIGENTE</p>
-                <p>INVESTIR NA SUA SAÚDE E APRENDIZADO</p>
-                <p>
-                  OTIMIZAR O SEU TEMPO, PRECISANDO ESTUDAR MENOS E APRENDENDO
-                  MAIS
-                </p>
-                <p>MUDAR A SUA VIDA E DAS PESSOAS QUE VOCÊ AMA</p>
-              </div>
+          <div id="payment-benefit">
+            <div>
+              <h1>🧠</h1>
             </div>
-            <div id="payment-final-price">
-              <div>
-                <div id="old-price">
-                  <h1>
-                    <h2>R$ 249,99</h2>
-                  </h1>
-                </div>
-                <div id="installments">
-                  <p>12x*</p>
-                  <p>12,99</p>
-                </div>
-                <p id="ou">ou</p>
-                <div id="entire">
-                  <div id="entire-title">
+            <div>
+              <p>SE TORNAR MAIS INTELIGENTE,</p>
+            </div>
+            <div>
+              <p>INVESTIR NA SUA SAÚDE E APRENDIZADO,</p>
+            </div>
+            <div>
+              <p>
+                OTIMIZAR O SEU TEMPO, PRECISANDO ESTUDAR MENOS E APRENDENDO MAIS
+              </p>
+            </div>
+            <div>
+              <p>E MUDAR A SUA VIDA E DAS PESSOAS QUE VOCÊ AMA</p>
+            </div>
+          </div>
+          <div id="payment-final">
+            <div id="payment-box">
+              <div id="payment-final-price">
+                <div>
+                  <div id="old-price">
                     <h1>
-                      <span>R$</span> 119,99<h2>à vista</h2>
+                      <h2>239,99</h2>
                     </h1>
                   </div>
+                  <div id="installments">
+                    <p>12x*</p>
+                    <p>12,99</p>
+                  </div>
+                  <p id="ou">ou</p>
+                  <div id="entire">
+                    <div id="entire-title">
+                      <h1>
+                        <span>R$</span> 119,99<h2>à vista com</h2>
+                        <div>
+                          <h3>50% OFF</h3>
+                          <h4>DESCONTO EXCLUSIVO DE LANÇAMENTO</h4>
+                        </div>
+                      </h1>
+                    </div>
+                  </div>
+                  <BuyButton content={"QUERO COMEÇAR AGORA!"} />
                 </div>
               </div>
             </div>
           </div>
-          <div id="rainbow-separator"></div>
         </div>
       </div>
     </React.Fragment>

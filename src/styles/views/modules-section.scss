@@ -162,6 +162,6 @@
     @include padding('all', 2);
     @include padding('x', 4);
     @include margin('b', 4);
-    @include buy-button('night', colors.$text-light);
+    @include night-button(colors.$text-light);
   }
 }
