@@ -7,24 +7,26 @@ const AuthorSection = () => {
       <div id="about-author">
         <div id="author-caption">
           <p>
-            {" "}
-            Olá, meu nome é Lucas Tinoco, tenho 21 anos e trabalho como Designer
-            e Programador Mobile/Web. Estudo desde os 12 anos de idade técnicas
-            de como aprender melhor as coisas que eu levava como diversão e
-            brincadeira na época (como modelar bonequinhos 3D do Minecraft no
-            computador) !
+            Olá, meu nome é <span>Lucas Tinoco</span>, tenho 21 anos e trabalho
+            como <span>Designer e Programador Mobile/Web</span>. Estudo desde os
+            14 anos de idade técnicas de como aprender melhor as coisas que eu
+            levava como diversão e brincadeira na época (como modelar
+            bonequinhos 3D do Minecraft no computador) e também assuntos mais
+            sérios como neurologia e nutrição!
           </p>
           <p>
-            {" "}
             Como um autodidata, essa paixão e sede pelo aprendizado nutriu um
             sonho, compartilhar com as pessoas o desejo de aprenderem as coisas
-            que sempre quiseram, algo que dê felicidade à suas vidas, não
-            importa o que seja.
+            que sempre quiseram,{" "}
+            <span>
+              algo que dê felicidade à suas vidas, não importa o que seja
+            </span>
+            .
           </p>
           <p>
-            {" "}
-            O bem mais valioso é o conhecimento, este te acompanhará pela
-            eternidade de sua existência. Ninguém o tirará de você.
+            O bem mais valioso é o <span>conhecimento</span>, este te
+            acompanhará pela eternidade de sua existência.{" "}
+            <span>Ninguém o tirará de você</span>.
           </p>
         </div>
       </div>

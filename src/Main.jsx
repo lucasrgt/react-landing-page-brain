@@ -9,6 +9,7 @@ import PresentationSection from "./views/PresentationSection.jsx";
 import BonusSection from "./views/BonusSection.jsx";
 import PaymentSection from "./views/PaymentSection.jsx";
 import AuthorSection from "./views/AuthorSection.jsx";
+import MissionSection from "./views/MissionSection.jsx";
 
 import "./styles/main.scss";
 
@@ -24,6 +25,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <BonusSection />
       <PaymentSection />
       <AuthorSection />
+      <MissionSection />
     </React.Fragment>
   </React.StrictMode>
 );

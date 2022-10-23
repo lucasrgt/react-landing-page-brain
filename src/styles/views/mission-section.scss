@@ -1,47 +1,64 @@
-#author-section {
+#mission-section {
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   color: $text-light;
+
   background: {
     color: $background-dark;
-    image: url("/src/assets/img/volcano.png");
+    image: url("/src/assets/img/sirius.jpg");
     repeat: no-repeat;
     position: center;
     size: cover;
   }
 
-  #author-title {
+  #mission-title {
     @include margin('y', 4);
     @include responsive-text(48);
-    color: $red-variant;
+    color: $blue-variant;
   }
 
-  #about-author {
+  #mission-author {
     width: $constraints;
     display: flex;
+    align-items: center;
     justify-content: space-between;
   }
 
-  #author-caption {
+  #mission-caption {
     display: flex;
     flex-direction: column;
-    width: 50%;
+
+    width: 100%;
     @include margin('b', 4);
     @include responsive-text(24, regular);
 
+    p {
+      @include margin('y', 2);
+    }
+
     span {
-      color: $red-variant;
+      color: $blue-variant;
       font-weight: 500;
     }
 
-    p {
+    #mission-topic {
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-      @include margin('y', 2);
+      img {
+
+        width: 3%;
+        @include margin('r', 1);
+
+      }
+
+      p {
+        width: 75%;
+      }
     }
   }
-
-
 }

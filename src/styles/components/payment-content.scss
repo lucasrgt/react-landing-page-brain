@@ -70,6 +70,7 @@ $benefits-colors: (#5cfbec, #0167ff, #ff5aa5, #ffbda0);
       }
 
       @include night-button(colors.$text-light);
+      @include margin('b', 4);
     }
   }
 
