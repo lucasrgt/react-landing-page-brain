@@ -1,0 +1,28 @@
+#warranty-banner {
+  background: #121212;
+  width: 100%;
+  margin: 0 auto;
+  @include margin('b', 4);
+
+  img {
+    max-width: 30%;
+    @include margin('t', 4);
+  }
+
+
+  p {
+    @include responsive-text(24, regular);
+    color: $text-light;
+    @include margin('y', 2);
+  }
+
+  img, p {
+    @include margin('x', 2)
+  }
+
+  .rainbow-separator {
+    width: 100%;
+    height: rem(8);
+    background: linear-gradient(to right, $list-rainbow);
+  }
+}

@@ -2,6 +2,10 @@
 
 $benefits-colors: (#5cfbec, #0167ff, #ff5aa5, #ffbda0);
 
+#payment-title {
+  @include padding('t', 5);
+}
+
 #payment-content {
   width: $constraints;
   display: flex;
@@ -153,6 +157,27 @@ $benefits-colors: (#5cfbec, #0167ff, #ff5aa5, #ffbda0);
       display: flex;
       flex-direction: column;
       justify-content: center;
+      @include margin('b', 4);
+
+      #lifetime {
+        width: 100%;
+        height: rem(16);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include padding('y', 2);
+
+        img {
+          width: 50%;
+          @include margin('b', 4);
+        }
+
+        h4 {
+          @include responsive-text(32);
+          color: colors.$text-light;
+        }
+
+      }
 
       #payment-final-benefits {
         display: flex;
@@ -161,7 +186,7 @@ $benefits-colors: (#5cfbec, #0167ff, #ff5aa5, #ffbda0);
         align-items: center;
         color: colors.$text-light;
         border-radius: $default-border-radius;
-        width: 100%;
+        width: 75%;
         margin: 0 auto;
 
 
@@ -174,20 +199,24 @@ $benefits-colors: (#5cfbec, #0167ff, #ff5aa5, #ffbda0);
       }
 
       #payment-final-price {
+        width: 50%;
+        margin: 0 auto;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         text-align: center;
         color: colors.$text-light;
-        border-width: rem(8) !important;
-        border-style: solid !important;
-        border-image: linear-gradient(to bottom, colors.$list-rainbow) 1 !important;
+        //border-width: rem(8) !important;
+        //border-style: solid !important;
+        //border-image: linear-gradient(to bottom, colors.$list-rainbow) 1 !important;
         @include dark-glass();
-        @include padding('all', 5);
+        border-radius: $default-border-radius;
+        @include padding('all', 4);
 
         button {
-          width: 100%;
+          width: 87.5%;
           @include animation-scaling();
-          @include night-button(colors.$text-light);
+          @include sunset-button(colors.$text-light);
           transition: 0.5s;
 
 
@@ -222,6 +251,8 @@ $benefits-colors: (#5cfbec, #0167ff, #ff5aa5, #ffbda0);
             &:nth-child(2) {
               @include responsive-text(48);
             }
+
+
           }
         }
 
@@ -269,12 +300,12 @@ $benefits-colors: (#5cfbec, #0167ff, #ff5aa5, #ffbda0);
               @include padding('all', 1);
 
               h3 {
-                color: colors.$green-variant;
+                color: colors.$red-variant;
                 @include responsive-text(48);
               }
 
               h4 {
-                @include responsive-text(24)
+                @include responsive-text(24);
               }
             }
           }

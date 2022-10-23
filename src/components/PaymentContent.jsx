@@ -11,9 +11,10 @@ function PaymentContent() {
             <p>MUDE O SEU CÉREBRO.</p>
             <p>MUDE A SUA VIDA.</p>
             <p>
-              Se tornar mais inteligente é muito mais barato do que você pensa.
+              Despertar o verdadeiro potencial que sempre esteve com você é
+              muito mais barato do que você pensa.
             </p>
-            <BuyButton content="QUERO ME TORNAR MAIS INTELIGENTE" />
+            <BuyButton content="QUERO DESBLOQUEAR A MINHA VERDADEIRA INTELIGÊNCIA" />
           </div>
           <div id="prices-comparison-container">
             <PricesComparison />
@@ -23,7 +24,7 @@ function PaymentContent() {
         <div id="payment-final-container">
           <div id="payment-benefit">
             <div>
-              <h1>🧠</h1>
+              <p>•</p>
             </div>
             <div>
               <p>SE TORNAR MAIS INTELIGENTE,</p>
@@ -37,11 +38,20 @@ function PaymentContent() {
               </p>
             </div>
             <div>
-              <p>E MUDAR A SUA VIDA E DAS PESSOAS QUE VOCÊ AMA</p>
+              <p>E MUDAR A SUA VIDA E DAS PESSOAS QUE VOCÊ AMA.</p>
+            </div>
+            <div>
+              <p>•</p>
             </div>
           </div>
           <div id="payment-final">
             <div id="payment-box">
+              <div id="lifetime">
+                <img
+                  src="/src/assets/img/lifetime.png"
+                  alt="Acesso Vitalício"
+                />
+              </div>
               <div id="payment-final-price">
                 <div>
                   <div id="old-price">

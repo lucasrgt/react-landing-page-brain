@@ -49,16 +49,16 @@
         object-fit: cover;
 
         img {
-          opacity: 0.975;
+          opacity: 1;
           height: auto;
           width: 100%;
           border-top-left-radius: $default-border-radius;
           border-top-right-radius: $default-border-radius;
-          filter: contrast(80%);
+          filter: contrast(90%);
           transition: 0.5s;
 
           &:hover {
-            filter: contrast(90%);
+            filter: contrast(100%);
           }
         }
       }
