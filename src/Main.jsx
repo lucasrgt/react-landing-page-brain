@@ -12,6 +12,7 @@ import AuthorSection from "./views/AuthorSection.jsx";
 import MissionSection from "./views/MissionSection.jsx";
 
 import "./styles/main.scss";
+import FaqSection from "./views/FaqSection.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -24,6 +25,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <PresentationSection />
       <BonusSection />
       <PaymentSection />
+      <FaqSection />
       <AuthorSection />
       <MissionSection />
     </React.Fragment>

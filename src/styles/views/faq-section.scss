@@ -1,0 +1,59 @@
+#faq-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: {
+    color: $background-light;
+    image: url("src/assets/img/light-mesh.jpg");
+    repeat: no-repeat;
+    position: center;
+    size: cover;
+  }
+
+  #faq-title {
+    color: $text-dark;
+    @include margin('y', 4);
+    @include responsive-text(48);
+
+    span {
+      @include responsive-text(16);
+      color: $text-gray;
+    }
+  }
+
+  #questions {
+    width: $constraints;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    text-align: start;
+
+    .question-button {
+
+      cursor: pointer;
+      color: $text-dark;
+      @include responsive-text(32);
+      @include margin('b', 4);
+      @include padding('all', 2);
+      border-radius: $default-border-radius;
+      transition: 0.5s;
+      border: 0px solid transparent;
+
+      &:hover {
+        @include glass;
+      }
+
+      p {
+        cursor: default;
+        color: $text-gray;
+        @include responsive-text(24, regular);
+        @include margin('y', 1);
+      }
+    }
+  }
+
+
+}

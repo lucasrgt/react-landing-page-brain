@@ -4,20 +4,20 @@ const modules = [
   {
     id: 1,
     title: "NUTRIÇÃO",
-    description: `Alimentos e temperos secretos que vão turbinar o seu cérebro e explicação detalhada sobre vitaminas.`,
+    description: `Alimentos e temperos secretos que vão turbinar o seu cérebro. Explicação aprofundada sobre vitaminas.`,
     image: "nutrition",
   },
   {
     id: 2,
     title: "HIDRATAÇÃO",
-    description: `Minerais, "elixires", como se hidratar de forma correta para ter saúde e energia para
+    description: `Minerais, "elixires", como se hidratar de forma correta para ter saúde/energia para
                 estudar e aprofundamento sobre um milenar conhecimento: Jejum.`,
     image: "hydration",
   },
   {
     id: 3,
     title: "OXIGENAÇÃO",
-    description: `A importância do oxigênio pro cérebro, exercícios físicos e de respiração para fazer seu corpo e mente
+    description: `A importância do oxigênio para o cérebro, exercícios físicos e de respiração para fazer seu corpo e mente
                 funcionarem em alto desempenho.`,
     image: "oxygenation",
   },
@@ -25,7 +25,7 @@ const modules = [
     id: 4,
     title: "AMBIENTAÇÃO",
     description: `Como montar o seu cantinho de estudos para você ter foco,
-                concentração, paz e tudo que precisa perto de você e técnicas e suplementos para melhorar o seu sono.`,
+                concentração, paz e tudo que precisa perto de você. Você também conhecerá técnicas e suplementos para melhorar o seu sono.`,
     image: "ambientation",
   },
   {
@@ -33,7 +33,7 @@ const modules = [
     title: "MEMORIZAÇÃO",
     description: `Como a memória funciona e poderosas técnicas de memorização que você nunca ouviu falar.
                 Dicas para aprender idiomas, programação e para provas
-                importantes.`,
+                importantes, como vestibulares e concursos.`,
     image: "memorization",
   },
 ];

@@ -29,6 +29,9 @@ const AuthorSection = () => {
             <span>Ninguém o tirará de você</span>.
           </p>
         </div>
+        <div id="author-image">
+          <img src="/src/assets/img/lucas2.png" alt="Lucas Tinoco" />
+        </div>
       </div>
     </section>
   );
