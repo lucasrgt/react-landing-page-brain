@@ -1,6 +1,6 @@
 @use '../colors.scss';
 
-$i-colors: (#5cfbec, red, blue, green, yellow, orange);
+$i-colors: (colors.$light-blue-variant, colors.$blue-variant, colors.$pinky-variant, colors.$red-variant, colors.$orange-variant, colors.$beige-variant, colors.$beige-variant, colors.$orange-variant, colors.$red-variant,);
 
 #pain-problem {
   height: 50vh;

@@ -1,0 +1,25 @@
+#decision-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  #decision-title {
+    width: $constraints;
+    color: $text-dark;
+    @include margin('all', 4);
+    @include responsive-text(48);
+
+    p {
+      @include margin('b', 2);
+    }
+
+    button {
+      @include sunset-button($text-light);
+    }
+  }
+
+  footer {
+    @include margin('b', 4);
+  }
+}

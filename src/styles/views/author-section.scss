@@ -1,5 +1,6 @@
 #author-section {
   width: 100%;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -20,6 +21,7 @@
 
   #about-author {
     width: $constraints;
+    margin: auto auto;
     display: flex;
     justify-content: space-between !important;
     align-items: center;

@@ -13,6 +13,7 @@ import MissionSection from "./views/MissionSection.jsx";
 
 import "./styles/main.scss";
 import FaqSection from "./views/FaqSection.jsx";
+import DecisionSection from "./views/DecisionSection.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -28,6 +29,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <FaqSection />
       <AuthorSection />
       <MissionSection />
+      <DecisionSection />
     </React.Fragment>
   </React.StrictMode>
 );
