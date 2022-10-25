@@ -1,6 +1,9 @@
 import React from "react";
 import Gift from "../components/Gift.jsx";
 import WarrantyBanner from "../components/WarrantyBanner";
+import BonusTextImg from "../assets/img/bonus-text.png";
+import BonusTitleOneImg from "../assets/img/bonus-1-title.png";
+import BonusTitleTwoImg from "../assets/img/bonus-2-title.png";
 
 function BonusSection() {
   return (
@@ -9,7 +12,7 @@ function BonusSection() {
         <div id="bonus-container">
           <p id="bonus-title">VOCÊ AINDA RECEBE DE PRESENTE</p>
           <div id="bonus-text-img-container">
-            <img src="/src/assets/img/bonus-text.png" alt={"Bônus"} />
+            <img src={BonusTextImg} alt={"Bônus"} />
           </div>
           <div id="bonus-gifts-container">
             <div id="gift-container">
@@ -19,7 +22,7 @@ function BonusSection() {
               <div>
                 <img
                   id="gift-bonus-title"
-                  src="/src/assets/img/bonus-1-title.png"
+                  src={BonusTitleOneImg}
                   alt={"Titulo Bônus 1"}
                 />
                 <p>
@@ -35,12 +38,12 @@ function BonusSection() {
               <div>
                 <img
                   id="gift-bonus-title"
-                  src="/src/assets/img/bonus-2-title.png"
+                  src={BonusTitleTwoImg}
                   alt={"Titulo Bônus 2"}
                 />
                 <p>
                   Valiosas técnicas para facilitar a aplicação do material em
-                  sua rotina.
+                  sua rotina. Dicas, receitas, lista de materiais e muito mais!
                 </p>
               </div>
             </div>

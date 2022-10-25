@@ -1,6 +1,6 @@
-import React from 'react';
-import BuyButton from './BuyButton';
-import Logo from './Logo';
+import React from "react";
+import BuyButton from "./BuyButton";
+import Logo from "./Logo";
 
 const Header = () => {
   return (
@@ -9,16 +9,16 @@ const Header = () => {
         <Logo />
         <ul>
           <li>
-            <a href="#">O que você aprenderá</a>
+            <a href="#modules-section">O que você aprenderá</a>
+          </li>
+          {/*<li>*/}
+          {/*  <a href="#">Depoimentos</a>*/}
+          {/*</li>*/}
+          <li>
+            <a href="#author-section">Sobre o autor</a>
           </li>
           <li>
-            <a href="#">Depoimentos</a>
-          </li>
-          <li>
-            <a href="#">Sobre o autor</a>
-          </li>
-          <li>
-            <a href="#">FAQ</a>
+            <a href="#faq-section">FAQ</a>
           </li>
         </ul>
         <BuyButton content="COMEÇAR AGORA" />

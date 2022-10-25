@@ -1,7 +1,9 @@
-import React from 'react';
+import React from "react";
 
-const Book = ({ color = 'white' }) => {
-  return <img id="book" src={`src/assets/img/book-${color}.png`}></img>;
+import BookImg from "../assets/img/book-white.png";
+
+const Book = () => {
+  return <img id="book" src={BookImg} alt={"Livro"}></img>;
 };
 
 export default Book;

@@ -25,6 +25,12 @@
     display: flex;
     justify-content: space-between !important;
     align-items: center;
+    @include device(s) {
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      flex-direction: column;
+    }
   }
 
   #author-caption {
@@ -47,11 +53,16 @@
 
   #author-image {
     display: flex;
-    justify-content: end;
+    justify-content: center;
 
     img {
       border-radius: $default-border-radius;
-      width: 70%;
+      width: 80%;
+      align-self: center;
+      @include margin('b', 4);
+      @include device(s) {
+        width: 50%;
+      }
     }
 
   }

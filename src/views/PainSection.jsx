@@ -12,7 +12,6 @@ const PainSection = () => {
           triggerHook={0}
           duration={"200%"}
           pin={"#pain-title"}
-          indicators={true}
         >
           <section id="pain-section">
             <div id="pain-title">

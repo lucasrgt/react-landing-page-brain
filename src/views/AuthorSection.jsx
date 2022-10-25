@@ -1,5 +1,7 @@
 import React from "react";
 
+import AuthorImg from "../assets/img/author.jpg";
+
 const AuthorSection = () => {
   return (
     <section id="author-section">
@@ -30,7 +32,7 @@ const AuthorSection = () => {
           </p>
         </div>
         <div id="author-image">
-          <img src="/src/assets/img/lucas2.png" alt="Lucas Tinoco" />
+          <img src={AuthorImg} alt="Lucas Tinoco" />
         </div>
       </div>
     </section>

@@ -1,11 +1,13 @@
 import React from "react";
 
+import WarrantyImg from "../assets/img/warranty.png";
+
 const WarrantyBanner = () => {
   return (
     <div id="warranty-banner">
       <div className="rainbow-separator"></div>
       <div>
-        <img src="/src/assets/img/warranty.png" alt="Garantia" />
+        <img src={WarrantyImg} alt="Garantia" />
       </div>
 
       <p>

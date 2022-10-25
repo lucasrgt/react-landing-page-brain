@@ -10,10 +10,15 @@ import BonusSection from "./views/BonusSection.jsx";
 import PaymentSection from "./views/PaymentSection.jsx";
 import AuthorSection from "./views/AuthorSection.jsx";
 import MissionSection from "./views/MissionSection.jsx";
-
-import "./styles/main.scss";
 import FaqSection from "./views/FaqSection.jsx";
 import DecisionSection from "./views/DecisionSection.jsx";
+
+import "./styles/main.scss";
+
+import ReactGA from "react-ga";
+
+const TRACKING_ID = "UA-246866012-1";
+ReactGA.initialize(TRACKING_ID);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

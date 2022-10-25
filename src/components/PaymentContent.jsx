@@ -1,6 +1,7 @@
 import React from "react";
 import BuyButton from "./BuyButton.jsx";
 import PricesComparison from "./PricesComparison.jsx";
+import LifetimeImg from "../assets/img/lifetime.png";
 
 function PaymentContent() {
   return (
@@ -47,10 +48,7 @@ function PaymentContent() {
           <div id="payment-final">
             <div id="payment-box">
               <div id="lifetime">
-                <img
-                  src="/src/assets/img/lifetime.png"
-                  alt="Acesso Vitalício"
-                />
+                <img src={LifetimeImg} alt="Acesso Vitalício" />
               </div>
               <div id="payment-final-price">
                 <div>
