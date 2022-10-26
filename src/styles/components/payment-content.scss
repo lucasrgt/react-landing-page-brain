@@ -2,10 +2,6 @@
 
 $benefits-colors: (#5cfbec, #0167ff, #ff5aa5, #ffbda0);
 
-#payment-title {
-  @include padding('t', 5);
-}
-
 #payment-content {
   width: $constraints;
   display: flex;
@@ -226,12 +222,12 @@ $benefits-colors: (#5cfbec, #0167ff, #ff5aa5, #ffbda0);
         #old-price {
           color: $text-gray;
 
-          @include responsive-text(32);
+          @include responsive-text(20);
           @include margin('b', 1);
 
           span {
             text-decoration: line-through;
-            @include responsive-text(24);
+            @include responsive-text(20);
           }
 
           h1 {

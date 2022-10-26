@@ -39,6 +39,10 @@
       transition: 0.25s;
       @include margin('all', 1);
 
+      @include device(s) {
+        width: 100%;
+      }
+
       &:hover {
         transform: translateY(-4px);
       }

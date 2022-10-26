@@ -1,12 +1,45 @@
 #depositions-section {
   display: flex;
-  height: 100vh;
   flex-direction: column;
   text-align: center;
+  background: {
+    image: url("/src/assets/img/light-mesh.jpg");
+    repeat: no-repeat;
+    position: center;
+    size: cover;
+  }
 
   #depositions-title {
     color: $text-dark;
     @include margin('t', 4);
     @include responsive-text(48);
   }
+
+  #depositions-cards-container {
+    width: $constraints;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    @include padding('y', 2);
+
+    #depositions-card {
+      width: 25%;
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: $default-border-radius;
+      transition: 0.25s;
+      @include glass();
+      @include margin('all', 2);
+
+      p {
+        @include padding('all', 4);
+      }
+    }
+  }
 }
+

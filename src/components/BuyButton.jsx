@@ -7,7 +7,7 @@ const BuyButton = ({ content, optionalContent = "" }) => {
     <a
       target={"_blank"}
       rel="noopener noreferrer"
-      href="https://pay.hotmart.com/F75999336L?checkoutMode=10"
+      href="https://pay.hotmart.com/F75999336L?off=vnqd0xdm"
       onClick={() => gaEventTracker("checkout")}
     >
       <button id="buy-button">

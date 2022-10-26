@@ -54,18 +54,18 @@ function PaymentContent() {
                 <div>
                   <div id="old-price">
                     <h1>
-                      <h2>399,99</h2>
+                      <h2>249,99</h2>
                     </h1>
                   </div>
                   <div id="installments">
                     <p>12x*</p>
-                    <p>19,99</p>
+                    <p>12,45</p>
                   </div>
                   <p id="ou">ou</p>
                   <div id="entire">
                     <div id="entire-title">
                       <h1>
-                        <span>R$</span> 199,99<h2>à vista com</h2>
+                        <span>R$</span> 124,77<h2>à vista com</h2>
                         <div>
                           <h3>50% OFF</h3>
                           <h4>DESCONTO EXCLUSIVO DE LANÇAMENTO</h4>
@@ -73,10 +73,7 @@ function PaymentContent() {
                       </h1>
                     </div>
                   </div>
-                  <BuyButton
-                    content={"QUERO COMEÇAR AGORA!"}
-                    optionalContent={"R$ 0,65 POR DIA"}
-                  />
+                  <BuyButton optionalContent={"R$ 0,41 POR DIA"} />
                 </div>
               </div>
             </div>

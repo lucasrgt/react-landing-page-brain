@@ -7,6 +7,8 @@
   justify-content: center;
 
   #bonus-container {
+    @include padding('t', 4);
+
     #bonus-title {
       color: colors.$text-dark;
       @include responsive-text(32);

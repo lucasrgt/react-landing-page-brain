@@ -49,6 +49,10 @@
 
       @include margin('y', 2);
     }
+
+    @include device(s) {
+      width: $constraints;
+    }
   }
 
   #author-image {

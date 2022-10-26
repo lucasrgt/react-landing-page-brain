@@ -36,9 +36,10 @@
     display: flex;
     flex: 50%;
     justify-content: end;
+    align-items: flex-start;
 
     img {
-      max-width: 50%;
+      max-width: rem(256);
       @include animation-floating;
     }
   }
@@ -55,7 +56,8 @@
       @include padding('t', 2);
 
       img {
-        max-width: 25% !important;
+        max-width: rem(128);
+        height: auto !important;
       }
     }
 

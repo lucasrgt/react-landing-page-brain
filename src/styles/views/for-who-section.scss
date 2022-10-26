@@ -16,6 +16,7 @@
   color: colors.$text-light;
 
   h1 {
+    width: $constraints;
     @include padding('y', 4);
     @include responsive-text(48);
   }
