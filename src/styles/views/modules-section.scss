@@ -29,7 +29,7 @@
 
 
     #module-card {
-      width: 30%;
+      width: 25%;
       display: flex;
       flex-grow: 1;
       flex-direction: column;
@@ -37,6 +37,7 @@
       align-items: center;
       border-radius: $default-border-radius;
       transition: 0.25s;
+      @include margin('all', 1);
 
       &:hover {
         transform: translateY(-4px);
@@ -93,75 +94,76 @@
       }
     }
 
-    #module-information {
-      width: 100%;
-      flex-grow: 3;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      text-align: center;
 
-      div {
-        flex-grow: 1;
-        width: 50%;
-        margin: 0 auto;
-        border-radius: $default-border-radius;
+  }
 
-        @include padding('all', 1);
-        @include margin('y', 2);
-
-        @include glass();
-
-        transition: 0.25s;
-
-        &:hover {
-          transform: translateY(-4px);
-        }
-
-        &:nth-child(1) {
-          background-color: cornflowerblue;
-          opacity: 0.8;
-        }
-
-        &:nth-child(2) {
-          background-color: lightcoral;
-          opacity: 0.8;
-        }
-
-        &:nth-child(3) {
-          background-color: orange;
-          opacity: 0.8;
-          margin: 0 auto;
-        }
-
-        h1 {
-          @include responsive-text(48);
-          color: colors.$text-dark;
-        }
-
-        h2 {
-          @include responsive-text(32);
-        }
-
-        .beige {
-          color: colors.$red-variant;
-        }
-
-        .pink {
-          color: colors.$pinky-variant;
-        }
-
-        .blue {
-          color: colors.$light-blue-variant;
-        }
-      }
+  #module-button {
+    button {
+      @include padding('all', 2);
+      @include padding('x', 4);
+      @include margin('all', 2);
+      @include night-button(colors.$text-light);
     }
   }
 
-  button {
-    @include padding('all', 2);
-    @include padding('x', 4);
-    @include margin('b', 4);
-    @include night-button(colors.$text-light);
+  #module-information {
+    width: $constraints;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    div {
+      width: 50%;
+      margin: 0 auto;
+      border-radius: $default-border-radius;
+
+      @include padding('all', 1);
+      @include margin('y', 2);
+      @include glass();
+
+      transition: 0.25s;
+
+      &:hover {
+        transform: translateY(-4px);
+      }
+
+      &:nth-child(1) {
+        background-color: cornflowerblue;
+        opacity: 0.8;
+      }
+
+      &:nth-child(2) {
+        background-color: lightcoral;
+        opacity: 0.8;
+      }
+
+      &:nth-child(3) {
+        background-color: orange;
+        opacity: 0.8;
+      }
+
+      h1 {
+        @include responsive-text(48);
+        color: colors.$text-dark;
+      }
+
+      h2 {
+        @include responsive-text(32);
+      }
+
+      .beige {
+        color: colors.$red-variant;
+      }
+
+      .pink {
+        color: colors.$pinky-variant;
+      }
+
+      .blue {
+        color: colors.$light-blue-variant;
+      }
+    }
   }
 }

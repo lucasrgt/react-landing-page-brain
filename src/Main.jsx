@@ -16,6 +16,7 @@ import DecisionSection from "./views/DecisionSection.jsx";
 import "./styles/main.scss";
 
 import ReactGA from "react-ga";
+import DepositionsSection from "./views/DepositionsSection.jsx";
 
 const TRACKING_ID = "UA-246866012-1";
 ReactGA.initialize(TRACKING_ID);
@@ -29,6 +30,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <ModulesSection />
       <MethodSection />
       <PresentationSection />
+      <DepositionsSection />
       <BonusSection />
       <PaymentSection />
       <FaqSection />

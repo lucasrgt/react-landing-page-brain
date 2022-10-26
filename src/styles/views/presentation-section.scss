@@ -7,6 +7,7 @@
 
   img {
     width: 33.333%;
+    height: intrinsic !important;
     filter: contrast(75%);
     transition: 0.2s;
 

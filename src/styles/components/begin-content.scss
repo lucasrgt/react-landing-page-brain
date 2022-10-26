@@ -38,7 +38,7 @@
     justify-content: end;
 
     img {
-      max-width: 75%;
+      max-width: 50%;
       @include animation-floating;
     }
   }
@@ -55,7 +55,7 @@
       @include padding('t', 2);
 
       img {
-        max-width: 50% !important;
+        max-width: 25% !important;
       }
     }
 

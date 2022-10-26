@@ -10,7 +10,27 @@ const ModulesSection = () => {
         <div>
           <ModuleCards />
         </div>
-        <BuyButton content={"QUERO COMEÇAR AGORA!"} />
+        <div id="module-information">
+          <div>
+            <p>🍂</p>
+            <h2 className="beige">+DE </h2>
+            <h1>150</h1>
+            <h2 className="beige">PÁGINAS</h2>
+          </div>
+          <div>
+            <p>🧊</p>
+            <h1> 5 </h1>
+            <h2 className="blue">MÓDULOS</h2>
+          </div>
+          <div>
+            <p>🧠</p>
+            <h1>7</h1>
+            <h2 className="pink"> ANOS DE CONHECIMENTO </h2>
+          </div>
+        </div>
+        <div id="module-button">
+          <BuyButton content={"QUERO COMEÇAR AGORA!"} />
+        </div>
       </section>
     </React.Fragment>
   );

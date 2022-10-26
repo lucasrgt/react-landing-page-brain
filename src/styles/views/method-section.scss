@@ -39,7 +39,8 @@
       margin: 0 auto;
       border-radius: $default-border-radius;
       transition: 0.25s;
-      @include margin('y', 4);
+
+      @include margin('all', 2);
 
       &:hover {
         scale: 1.05;

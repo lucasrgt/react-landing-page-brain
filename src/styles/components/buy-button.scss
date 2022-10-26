@@ -38,5 +38,12 @@
   );
 }
 
+#button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  @include padding('all', 1);
+}
 
 

@@ -1,31 +1,21 @@
 import React from "react";
-import { Controller, Scene } from "react-scrollmagic";
 import BuyButton from "../components/BuyButton";
 import PainProblems from "../components/PainProblems";
 
 const PainSection = () => {
   return (
     <React.Fragment>
-      <Controller>
-        <Scene
-          triggerElement={"#pain-section"}
-          triggerHook={0}
-          duration={"200%"}
-          pin={"#pain-title"}
-        >
-          <section id="pain-section">
-            <div id="pain-title">
-              <div>
-                <p>QUANTAS VEZES VOCÊ JÁ PASSOU POR ISSO?</p>
-                <BuyButton content="MUDAR ISSO AGORA" />
-              </div>
-            </div>
-            <div id="pain-problems">
-              <PainProblems />
-            </div>
-          </section>
-        </Scene>
-      </Controller>
+      <section id="pain-section">
+        <div id="pain-title">
+          <p>QUANTAS VEZES VOCÊ JÁ PASSOU POR ISSO?</p>
+        </div>
+        <div id="pain-problems">
+          <PainProblems />
+        </div>
+        <div id="pain-button-container">
+          <BuyButton content="MUDAR ISSO AGORA" />
+        </div>
+      </section>
     </React.Fragment>
   );
 };

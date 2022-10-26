@@ -2,37 +2,35 @@
 
 #pain-section {
   width: 100%;
-  height: 300vh;
   display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
 
   //Section Title
   #pain-title {
-    width: 50%;
-    height: 100vh;
-    margin: 0 !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
     p {
       color: colors.$text-dark;
       @include responsive-text(32);
-      @include padding('b', 2);
     }
 
-    @include padding('all', 2);
-
-    #buy-button {
-      @include night-button(colors.$text-light);
-      @include padding('all', 2);
-    }
+    @include margin('all', 2);
   }
+}
 
-  //Problems
-  #pain-problems {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
+#pain-button-container {
+  @include margin('all', 2);
+
+  button {
+    @include night-button(colors.$text-light);
+    @include margin('all', 1);
   }
+}
+
+//Problems
+
+#pain-problems {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }

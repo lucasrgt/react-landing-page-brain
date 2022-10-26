@@ -2,17 +2,19 @@ import React from "react";
 import UseAnalyticsEventTracker from "./UseAnalyticsEventTracker.jsx";
 
 const BuyButton = ({ content, optionalContent = "" }) => {
-  const gaEventTracker = UseAnalyticsEventTracker("Buy Button");
+  const gaEventTracker = UseAnalyticsEventTracker("checkout");
   return (
     <a
       target={"_blank"}
       rel="noopener noreferrer"
       href="https://pay.hotmart.com/F75999336L?checkoutMode=10"
-      onClick={() => gaEventTracker("buy")}
+      onClick={() => gaEventTracker("checkout")}
     >
       <button id="buy-button">
-        <h4>{content}</h4>
-        <h4>{optionalContent}</h4>
+        <div id="button-container">
+          <h4>{content}</h4>
+          <h4>{optionalContent}</h4>
+        </div>
       </button>
     </a>
   );

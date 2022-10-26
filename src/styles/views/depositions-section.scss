@@ -1,0 +1,12 @@
+#depositions-section {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  text-align: center;
+
+  #depositions-title {
+    color: $text-dark;
+    @include margin('t', 4);
+    @include responsive-text(48);
+  }
+}
