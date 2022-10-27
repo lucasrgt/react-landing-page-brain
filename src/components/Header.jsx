@@ -1,5 +1,4 @@
 import React from "react";
-import BuyButton from "./BuyButton";
 import Logo from "./Logo";
 
 const Header = () => {
@@ -21,7 +20,6 @@ const Header = () => {
             <a href="#faq-section">FAQ</a>
           </li>
         </ul>
-        <BuyButton content="COMEÇAR AGORA" />
       </header>
     </React.Fragment>
   );
